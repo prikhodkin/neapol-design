@@ -3,14 +3,27 @@ const advantagesNumbers = document.querySelectorAll('.advantages__number');
 const slidesList = document.querySelectorAll('.team__item');
 const $slider = $(".team__list");
 
+const showTeamScreen = () => {
+  $('.about').addClass('about--hide');
+  $('.team').addClass('team--show');
+  $('body').removeClass('white');
+  $('.team__photo').removeClass('team__photo--big');
+  $('.team__wrapper').addClass('team__wrapper--show');
+}
+
+const showAboutScreen = () => {
+  $('.about').removeClass('about--hide');
+  $('.team').removeClass('team--show');
+  $('body').addClass('white');
+  $('.team__photo').addClass('team__photo--big');
+  $('.team__wrapper').removeClass('team__wrapper--show');
+}
+
 const showTeam = () => {
   document.addEventListener('wheel', (evt) => {
     const delta = evt.deltaY;
     if(delta > 0) {
-      $('.about').addClass('about--hide');
-      $('.team').addClass('team--show');
-      $('body').removeClass('white');
-      $('.team__photo').removeClass('team__photo--big');
+      showTeamScreen();
     }
   })
 };
@@ -30,10 +43,7 @@ const mouseWheelHandler = (event) => {
       document.addEventListener('wheel', (evt) => {
         const delta = evt.deltaY;
         if (delta > 0) {
-          $('.about').removeClass('about--hide');
-          $('.team').removeClass('team--show');
-          $('body').addClass('white');
-          $('.team__photo').addClass('team__photo--big');
+          showAboutScreen();
           showTeam();
           setTimeout(() => {
             $slider.slick('slickGoTo', 0);
@@ -43,10 +53,7 @@ const mouseWheelHandler = (event) => {
     }
   } else {
     if (currentSlide === 0) {
-      $('.about').removeClass('about--hide');
-      $('.team').removeClass('team--show');
-      $('body').addClass('white');
-      $('.team__photo').addClass('team__photo--big');
+      showAboutScreen();
     } else {
       $slider.slick('slickPrev');
     }
@@ -60,22 +67,16 @@ $('.about__scroll--bottom').click(() => {
   if(currentSlide < slidesList.length - 1) {
     $slider.slick('slickNext');
   } else {
-    $('.about').removeClass('about--hide');
-    $('.team').removeClass('team--show');
-    $('body').addClass('white');
-    $('.team__photo').addClass('team__photo--big');
+    showAboutScreen();
     setTimeout(() => {
       $('.team__members').slick('slickGoTo', 0);
-    }, 400);
+    }, 500);
   }
 });
 
 $('.about__scroll--top').click((evt) => {
   evt.preventDefault();
-  $('.about').addClass('about--hide');
-  $('.team').addClass('team--show');
-  $('body').removeClass('white');
-  $('.team__photo').removeClass('team__photo--big')
+  showTeamScreen();
 });
 
 $.fn.animationTextLeftToRight = function(time) {
