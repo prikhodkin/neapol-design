@@ -50,20 +50,20 @@
   }
 }
 
-.team__about {
-  position: relative;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100% + 10px);
-    background: #ffffff;
-    transition: all 1.2s;
-  }
-}
+//.team__about {
+//  position: relative;
+//  &::before {
+//    content: "";
+//    display: block;
+//    position: absolute;
+//    top: 0;
+//    right: 0;
+//    width: 100%;
+//    height: calc(100% + 10px);
+//    background: #ffffff;
+//    transition: all 1.2s;
+//  }
+//}
 
 .slick-current {
   .team__name {
@@ -71,7 +71,21 @@
       width: 0;
     }
   }
-  .team__about {
+  //.team__about {
+  //  &::before {
+  //    width: 0;
+  //  }
+  //}
+  
+  .team__position {
+    &::before {
+      width: 0;
+    }
+  }
+  
+  .team__education {
+    transform: translateX(0);
+    opacity: 1;
     &::before {
       width: 0;
     }
@@ -85,21 +99,48 @@
 
 
 .team__position {
+  position: relative;
   font-weight: 300;
   font-size: 24px;
   line-height: 32px;
   color: $main-dark;
   margin: 0;
   margin-bottom: 16px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background: #ffffff;
+    transition: all 1.6s;
+  }
 }
 
 
 .team__education {
+  position: relative;
   font-weight: 300;
   font-size: 24px;
   line-height: 32px;
   color: $main-dark;
   margin: 0;
+  transform: translateX(-60%);
+  transition: all 0.7s;
+  opacity: 0;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background: #ffffff;
+    transition: all 2s;
+  }
 }
 
 .team__wrapper {

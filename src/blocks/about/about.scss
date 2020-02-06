@@ -101,6 +101,7 @@
   font-size: 20px;
   line-height: 140%;
   color: $main-light;
+  width: 180px;
   text-transform: lowercase;
   transition: all 0.3s;
   padding-left: 22px;
@@ -160,6 +161,7 @@
   text-transform: lowercase;
   color: $main-dark;
   opacity: 0.7;
+  width: 50px;
   transition: all 0.3s;
   &--bottom {
     position: absolute;
