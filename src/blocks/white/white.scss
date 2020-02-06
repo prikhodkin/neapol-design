@@ -1,0 +1,51 @@
+.white {
+  .header {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(7, 5, 0, 0.3);
+  }
+  .header__logo-icon {
+    fill: $main-light;
+  }
+  .menu {
+    color: $main-light;
+  }
+  .header__btn {
+    border-color: $main-light;
+    color: $main-light;
+  }
+  .social__item {
+    color: $main-light;
+    border-color: $main-light;
+  }
+  .txt {
+    color: $main-light;
+  }
+  .about__title {
+    color: $main-light;
+  }
+  
+  .about__scroll {
+    color: $main-light;
+  }
+  
+  .slick-current {
+    .team__name {
+      &::before {
+        width: 100%;
+      }
+    }
+    .team__about {
+      &::before {
+        width: 100%;
+      }
+    }
+    .team__right {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .team__members {
+    right: -790px;
+  }
+}

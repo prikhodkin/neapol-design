@@ -1,0 +1,51 @@
+.advantages__number {
+  display: inline-block;
+  position: relative;
+  font-family: $merri;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  padding-bottom: 15px;
+  color: $main-light;
+  transition: all 0.3s;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $main-light;
+    transition: all 1.3s;
+  }
+  &--active {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.advantages__txt {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: lowercase;
+  color: $main-light;
+  opacity: 0.7;
+  transition: all 0.3s;
+  margin-top: 12px;
+}
+
+.advantages {
+  @include list-reset;
+  display: flex;
+  margin: 0;
+}
+
+.advantages__item {
+  &:not(:last-child) {
+    margin-right: 72px;
+  }
+}

@@ -1,0 +1,21 @@
+//#example .new { opacity: 0; }
+//#example { display:none; }
+//#example .div_opacity {
+//  -webkit-transition: opacity 1s ease-in-out;
+//  -moz-transition: opacity 1s ease-in-out;
+//  -ms-transition: opacity 1s ease-in-out;
+//  -o-transition: opacity 1s ease-in-out;
+//  transition: opacity 1s ease-in-out;
+//  opacity: 1;
+//}
+
+.ltr {
+  display: none;
+  .letter {
+    opacity: 0;
+    &--show {
+      transition: opacity 0.7s ease-in-out;
+      opacity: 1;
+    }
+  }
+}

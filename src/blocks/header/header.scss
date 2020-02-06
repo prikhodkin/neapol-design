@@ -1,0 +1,38 @@
+.header__logo-icon {
+  width: 128px;
+  height: 106px;
+  transition: all 0.3s;
+}
+
+.header__btn {
+  display: inline-block;
+  color: $main-dark;
+  border: 1px solid $main-dark;
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: lowercase;
+  padding: 7px 15.1px 11px 15.16px;
+  transition: all 0.3s;
+  opacity: 1;
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  padding: 55px 40px 50px 55px;
+  border-right: 1px solid rgba(7, 5, 0, 0.3);
+  background: transparent;
+  transition: all 0.3s;
+}
