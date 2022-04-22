@@ -11,7 +11,7 @@
     "bem-tools-core": "0.0.3",
     "bem-tools-create": "^2.3.0",
     "browser-sync": "^2.26.7",
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
