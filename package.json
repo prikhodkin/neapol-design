@@ -21,7 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-eslint": "^6.0.0",
-    "gulp-favicons": "^2.3.1",
+    "gulp-favicons": "^4.0.0",
     "gulp-imagemin": "^6.2.0",
     "gulp-load-plugins": "^2.0.1",
     "gulp-newer": "^1.4.0",
